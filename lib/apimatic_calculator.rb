@@ -5,12 +5,10 @@
 
 require 'date'
 require 'json'
+
 require 'apimatic_core_interfaces'
 require 'apimatic_core'
 require 'apimatic_faraday_client_adapter'
-# rubocop:disable Style/MixinUsage
-include CoreLibrary
-# rubocop:enable Style/MixinUsage
 
 require_relative 'apimatic_calculator/api_helper'
 require_relative 'apimatic_calculator/client'
@@ -24,6 +22,8 @@ require_relative 'apimatic_calculator/http/http_call_back'
 require_relative 'apimatic_calculator/http/http_method_enum'
 require_relative 'apimatic_calculator/http/http_request'
 require_relative 'apimatic_calculator/http/http_response'
+
+# Logger
 
 # Models
 require_relative 'apimatic_calculator/models/base_model'

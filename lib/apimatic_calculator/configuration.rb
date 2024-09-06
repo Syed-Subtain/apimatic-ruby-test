@@ -29,11 +29,13 @@ module ApimaticCalculator
       attr_reader :environments
     end
 
-    def initialize(connection: nil, adapter: :net_http_persistent, timeout: 60,
-                   max_retries: 0, retry_interval: 1, backoff_factor: 2,
-                   retry_statuses: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524],
-                   retry_methods: %i[get put], http_callback: nil,
-                   environment: Environment::PRODUCTION)
+    def initialize(
+      connection: nil, adapter: :net_http_persistent, timeout: 60,
+      max_retries: 0, retry_interval: 1, backoff_factor: 2,
+      retry_statuses: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524],
+      retry_methods: %i[get put], http_callback: nil,
+      environment: Environment::PRODUCTION
+    )
 
       super connection: connection, adapter: adapter, timeout: timeout,
             max_retries: max_retries, retry_interval: retry_interval,
@@ -70,6 +72,7 @@ module ApimaticCalculator
                         retry_methods: retry_methods,
                         http_callback: http_callback, environment: environment)
     end
+
 
     # All the environments the SDK can run in.
     ENVIRONMENTS = {

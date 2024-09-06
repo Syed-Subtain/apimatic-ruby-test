@@ -10,16 +10,16 @@ Simple calculator API hosted on APIMATIC
 Install the gem from the command line:
 
 ```ruby
-gem install subtain_pack -v 1.3.2
+gem install subtain_pack -v 1.0.0
 ```
 
 Or add the gem to your Gemfile and run `bundle`:
 
 ```ruby
-gem 'subtain_pack', '1.3.2'
+gem 'subtain_pack', '1.0.0'
 ```
 
-For additional gem details, see the [RubyGems page for the subtain_pack gem](https://rubygems.org/gems/subtain_pack/versions/1.3.2).
+For additional gem details, see the [RubyGems page for the subtain_pack gem](https://rubygems.org/gems/subtain_pack/versions/1.0.0).
 
 ## Test the SDK
 
@@ -31,13 +31,13 @@ rake
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.3.2/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.0.0/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `environment` | Environment | The API environment. <br> **Default: `Environment.PRODUCTION`** |
+| `environment` | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
 | `connection` | `Faraday::Connection` | The Faraday connection object passed by the SDK user for making requests |
 | `adapter` | `Faraday::Adapter` | The Faraday adapter object passed by the SDK user for performing http requests |
 | `timeout` | `Float` | The value to use for connection timeout. <br> **Default: 60** |
@@ -58,11 +58,11 @@ client = ApimaticCalculator::Client.new(
 
 ## List of APIs
 
-* [Simple Calculator](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.3.2/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.0.0/doc/controllers/simple-calculator.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.3.2/doc/utility-classes.md)
-* [HttpResponse](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.3.2/doc/http-response.md)
-* [HttpRequest](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.3.2/doc/http-request.md)
+* [Utility Classes](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.0.0/doc/utility-classes.md)
+* [HttpResponse](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.0.0/doc/http-response.md)
+* [HttpRequest](https://www.github.com/Syed-Subtain/apimatic-ruby-test/tree/1.0.0/doc/http-request.md)
 

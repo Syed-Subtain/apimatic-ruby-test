@@ -33,9 +33,9 @@ def get_calculate(options = {})
 
 ```ruby
 collect = {
-  'operation': OperationTypeEnum::MULTIPLY,
-  'x': 222.14,
-  'y': 165.14
+  'operation' => OperationTypeEnum::MULTIPLY,
+  'x' => 222.14,
+  'y' => 165.14
 }
 
 result = simple_calculator_controller.get_calculate(collect)

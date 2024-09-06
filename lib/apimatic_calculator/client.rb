@@ -6,6 +6,7 @@
 module ApimaticCalculator
   #  apimatic_calculator client class.
   class Client
+    include CoreLibrary
     attr_reader :config
 
     # Access to simple_calculator controller.
@@ -14,11 +15,13 @@ module ApimaticCalculator
       @simple_calculator ||= SimpleCalculatorController.new @global_configuration
     end
 
-    def initialize(connection: nil, adapter: :net_http_persistent, timeout: 60,
-                   max_retries: 0, retry_interval: 1, backoff_factor: 2,
-                   retry_statuses: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524],
-                   retry_methods: %i[get put], http_callback: nil,
-                   environment: Environment::PRODUCTION, config: nil)
+    def initialize(
+      connection: nil, adapter: :net_http_persistent, timeout: 60,
+      max_retries: 0, retry_interval: 1, backoff_factor: 2,
+      retry_statuses: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524],
+      retry_methods: %i[get put], http_callback: nil,
+      environment: Environment::PRODUCTION, config: nil
+    )
       @config = if config.nil?
                   Configuration.new(connection: connection, adapter: adapter,
                                     timeout: timeout, max_retries: max_retries,

@@ -14,6 +14,7 @@ require_relative '../http_response_catcher'
 class ControllerTestBase < Minitest::Test
   parallelize_me!
   include ApimaticCalculator
+  include CoreLibrary
 
   # Create configuration and set any test parameters
   def create_configuration
